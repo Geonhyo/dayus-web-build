@@ -34,8 +34,8 @@ export default function Page() {
           <h1 className="text-4xl md:text-5xl font-normal leading-tight text-white drop-shadow-md">
             하루 한 장으로 <br />
             <strong className="font-extrabold text-primary">
-              "우리의 사랑은 <br className="md:hidden" />
-              더욱 가깝게"
+              &quot;우리의 사랑은 <br className="md:hidden" />
+              더욱 가깝게&quot;
             </strong>
           </h1>
 
