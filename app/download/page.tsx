@@ -8,12 +8,12 @@ export default function Page() {
   const isIOS = /iPhone|iPad|iPod/i.test(ua);
   // const isAndroid = /Android/i.test(ua); // 안드로이드 출시 후 적용
 
-  const appStoreUrl = process.env.NEXT_PUBLIC_IOS_STORE_URL as string; // 실제 앱스토어 URL 교체
-  // const playStoreUrl = process.env.NEXT_PUBLIC_AOS_STORE_URL as string; // 안드로이드 출시 후 적용
+  const iosDownloadUrl = "/download/ios";
+  // const aosDownloadUrl = "/download/android"; // 안드로이드 출시 후 적용
 
   if (typeof window !== "undefined") {
     if (isIOS) {
-      redirect(appStoreUrl);
+      redirect(iosDownloadUrl);
     }
   }
 
@@ -44,7 +44,7 @@ export default function Page() {
       {/* 버튼 */}
       <div className="flex gap-4 mb-10">
         <Link
-          href={appStoreUrl}
+          href={iosDownloadUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-primary px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:bg-primary/90 transition"
