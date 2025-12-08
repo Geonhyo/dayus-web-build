@@ -1,5 +1,6 @@
 // import DownloadIcon from "@/public/icons/download.svg";
 import DownloadIcon from "@/public/icons/download.svg";
+import DayusImage from "@/public/images/dayus.svg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,12 +8,13 @@ export default function Page() {
   return (
     <main className="h-full text-white">
       {/* Header */}
-      <header className="py-4 px-6 fixed top-0 left-0 w-full z-10 bg-transparent-dark">
-        <h1 className="text-3xl font-bold">DayUs</h1>
-        <div className="flex" />
+      <header className="py-4 px-6 fixed top-0 left-0 w-full z-10 bg-transparent-dark flex flex-row items-center">
+        <DayusImage className="w-[96px] h-[23px] fill-white" alt="DAYUS" />
+        <div className="flex flex-1" />
         <Link
-          className="px-4 py-2 bg-white rounded-lg absolute right-6 top-4 font-medium text-sm text-dark hover:bg-primary/90 hover:text-white transition"
+          className="px-4 py-2 bg-white rounded-lg font-medium text-sm text-dark hover:bg-primary/90 hover:text-white transition"
           href="/download"
+          prefetch={true}
         >
           다운로드
         </Link>
@@ -31,99 +33,128 @@ export default function Page() {
 
         {/* Content */}
         <div className="relative z-1 max-w-2xl">
-          <h1 className="text-4xl md:text-5xl font-normal leading-tight text-white drop-shadow-md">
-            하루 한 장으로 <br />
-            <strong className="font-extrabold text-primary">
-              &quot;우리의 사랑은 <br className="md:hidden" />
-              더욱 가깝게&quot;
-            </strong>
-          </h1>
+          <div className="mb-12 flex flex-row gap-1 items-center">
+            <div className="relative w-9 h-18">
+              <Image src="/images/laurel-l.webp" alt="Left Laurel" fill />
+            </div>
+            <h2 className="font-bold text-2xl text-white">
+              장기 연애 커플이 직접 만든 커플앱
+            </h2>
+            <div className="relative w-9 h-18">
+              <Image src="/images/laurel-r.webp" alt="Right Laurel" fill />
+            </div>
+          </div>
+          <div className="flex flex-col items-center gap-4">
+            <DayusImage
+              className="md:w-[400px] w-[300px] md:h-[96px] h-[72px] fill-white"
+              alt="DAYUS"
+            />
+            <h2 className="text-l md:text-xl font-medium leading-tight text-white-70">
+              하루 한 장, 둘만의 행복 습관
+              <br />
+            </h2>
+          </div>
 
-          <div className="mt-10">
+          <div className="mt-16">
             <Link
-              className="inline-flex items-center gap-2 bg-primary px-10 py-4 rounded-xl font-semibold text-white text-lg shadow-lg hover:bg-primary/90 transition"
+              className="group inline-flex items-center gap-2 bg-white px-10 py-4 rounded-xl shadow-lg hover:bg-primary transition"
               href="/download"
+              prefetch={true}
             >
-              앱 다운로드
-              <DownloadIcon className="w-5 h-5 fill-white" />
+              <p className="font-semibold text-dark text-lg group-hover:text-white ">
+                앱 다운로드
+              </p>
+              <DownloadIcon className="w-5 h-5 fill-dark group-hover:fill-white" />
             </Link>
           </div>
         </div>
       </section>
       {/* Feature 1 */}
       <div className="flex flex-col items-center py-16 px-6">
-        <p className="text-sm text-white text-center px-4 py-2 rounded-full bg-dark-70">
-          우리 둘만의 공간에서 즐겨요!
+        <p className="text-sm text-white-70 text-center px-4 py-2 rounded-full bg-dark-70">
+          둘만의 행복 습관
         </p>
-        <h2 className="text-3xl leading-normal font-bold mt-2 text-center">
-          일상 속 순간들을
+        <h3 className="leading-normal mt-4 text-center">
+          <span className="text-xl font-normal text-white-70">
+            매일 한 장씩 서로의 하루를
+          </span>
           <br />
-          상대방과 주고 받아요
-        </h2>
+          <strong className="text-3xl font-bold text-white">
+            주고받아보세요
+          </strong>
+        </h3>
         <Image
-          src="/images/screenshots/feature-1.webp"
-          alt="기능 1"
+          src="/images/screen-1.webp"
+          alt="메인 페이지 스크린샷"
           width={300}
-          height={600}
+          height={617}
           className="mx-auto mt-8"
         />
       </div>
       {/* Feature 2 */}
       <div className="flex flex-col items-center bg-dark-70 py-16 px-6">
         <p className="text-sm text-white-70 text-center px-4 py-2 rounded-full bg-dark">
-          궁금해서 얼른 나도 공유할래!
+          우리의 하루를 한 눈에
         </p>
-        <h2 className="text-3xl leading-normal font-bold mt-2 text-center">
-          하루의 첫 순간은
+        <h3 className="leading-normal mt-4 text-center">
+          <span className="text-xl font-normal text-white-70">
+            서로의 사진과 이야기로
+          </span>
           <br />
-          서로 동시에 공개돼요!
-        </h2>
+          <strong className="text-3xl font-bold text-white">
+            하루를 함께하세요
+          </strong>
+        </h3>
         <Image
-          src="/images/screenshots/feature-2.webp"
-          alt="기능 2"
+          src="/images/screen-2.webp"
+          alt="상세 페이지 스크린샷"
           width={300}
-          height={600}
+          height={617}
           className="mx-auto mt-8"
         />
       </div>
       {/* Feature 3 */}
       <div className="flex flex-col items-center py-16 px-6">
         <p className="text-sm text-white-70 text-center px-4 py-2 rounded-full bg-dark-70">
-          그냥 사라지는 순간들이 아니에요!
+          우리의 이야기로
         </p>
-        <h2 className="text-3xl leading-normal font-bold mt-2 text-center">
-          서로의 순간들이 모여
+        <h3 className="leading-normal mt-4 text-center">
+          <span className="text-xl font-normal text-white-70">
+            서로의 하루로 이루어진 이야기를
+          </span>
           <br />
-          우리의 이야기로 쌓여요
-        </h2>
+          <strong className="text-3xl font-bold text-white">
+            추억으로 간직하세요
+          </strong>
+        </h3>
         <Image
-          src="/images/screenshots/feature-3.webp"
-          alt="기능 3"
+          src="/images/screen-3.webp"
+          alt="추억 페이지 스크린샷"
           width={300}
-          height={600}
+          height={617}
           className="mx-auto mt-8"
         />
       </div>
       {/* Final CTA */}
       <section className="py-20 text-center bg-white">
-        <h2 className="text-3xl font-bold mb-6 text-dark">
-          지금 DayUs와 함께 <br /> 우리의 이야기를
-          <br />
-          시작해보세요
+        <h2 className="text-3xl font-medium mb-6 text-dark">
+          지금 DAYUS를 다운로드 받고 <br /> 둘만의 행복 습관을 시작해보세요
         </h2>
         <div className="flex justify-center gap-4">
-          <a
+          <Link
             className="border-dark border-2 text-dark hover:bg-dark hover:text-white px-6 py-3 rounded-lg font-semibold"
-            href="#"
+            href="/download/ios"
           >
             App Store
-          </a>
-          <a
+          </Link>
+          <Link
             className="border-dark border-2 text-dark hover:bg-dark hover:text-white px-6 py-3 rounded-lg font-semibold"
-            href="#"
+            href="https://forms.gle/PKpJ6enBmJpBjeHh7"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Google Play
-          </a>
+          </Link>
         </div>
       </section>
       {/* Footer */}
