@@ -25,7 +25,7 @@ export default function Page() {
   return (
     <main className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-dark text-white">
       {/* 미리보기 이미지 */}
-      <div className="relative w-48 h-48 md:w-64 md:h-64 mb-12">
+      <div className="relative w-36 h-48 md:w-48 md:h-64 mb-12">
         <Image
           src="/images/preview.webp"
           alt="미리보기 이미지"
