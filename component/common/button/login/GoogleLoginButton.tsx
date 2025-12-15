@@ -2,7 +2,6 @@
 
 import { useAuthStore } from "@/zustand/use-auth-store";
 import Image from "next/image";
-import Link from "next/link";
 
 type Props = {
   className?: string;
@@ -14,7 +13,7 @@ export default function GoogleLoginButton({ className, redirect }: Props) {
   const deviceInfo = getDeviceInfo();
 
   return (
-    <Link
+    <a
       className={`w-full h-14 flex flex-row items-center gap-4 bg-[#ffffff] px-6 rounded-2xl`}
       href={`${process.env.NEXT_PUBLIC_API_URL}/web/auth/google?deviceName=${
         deviceInfo.deviceName
@@ -31,6 +30,6 @@ export default function GoogleLoginButton({ className, redirect }: Props) {
       <p className={"text-base font-medium text-[#000000]"}>
         구글 계정으로 로그인
       </p>
-    </Link>
+    </a>
   );
 }
