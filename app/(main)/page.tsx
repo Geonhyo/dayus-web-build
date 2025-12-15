@@ -1,4 +1,3 @@
-// import DownloadIcon from "@/public/icons/download.svg";
 import DownloadIcon from "@/public/icons/download.svg";
 import DayusImage from "@/public/images/dayus.svg";
 import Image from "next/image";
@@ -7,18 +6,6 @@ import Link from "next/link";
 export default function Page() {
   return (
     <main className="h-full text-white">
-      {/* Header */}
-      <header className="py-4 px-6 fixed top-0 left-0 w-full z-10 bg-transparent-dark flex flex-row items-center">
-        <DayusImage className="w-[96px] h-[23px] fill-white" alt="DAYUS" />
-        <div className="flex flex-1" />
-        <Link
-          className="px-4 py-2 bg-white rounded-lg font-medium text-sm text-dark hover:bg-primary/90 hover:text-white transition"
-          href="/download"
-          prefetch={true}
-        >
-          다운로드
-        </Link>
-      </header>
       {/* Hero */}
       <section
         className="relative min-h-screen flex flex-col justify-center items-center text-center px-6"
@@ -51,7 +38,6 @@ export default function Page() {
             />
             <h2 className="text-l md:text-xl font-medium leading-tight text-white-70">
               하루 한 장, 둘만의 행복 습관
-              <br />
             </h2>
           </div>
 
@@ -165,6 +151,8 @@ export default function Page() {
             <Link
               className="hover:font-bold transition"
               href="/docs/terms-of-service"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               이용약관
             </Link>
@@ -172,6 +160,8 @@ export default function Page() {
             <Link
               className="hover:font-bold transition"
               href="/docs/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               개인정보처리방침
             </Link>

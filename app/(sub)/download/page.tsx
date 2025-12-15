@@ -6,10 +6,10 @@ export default function Page() {
   // iOS / Android User-Agent 판별
   const ua = typeof window === "undefined" ? "" : navigator.userAgent;
   const isIOS = /iPhone|iPad|iPod/i.test(ua);
-  const isAndroid = /Android/i.test(ua); // 안드로이드 출시 후 적용
+  const isAndroid = /Android/i.test(ua);
 
   const iosDownloadUrl = "/download/ios";
-  const aosDownloadUrl = "/download/android"; // 안드로이드 출시 후 적용
+  const aosDownloadUrl = "/download/android";
 
   if (typeof window !== "undefined") {
     if (isIOS) {
@@ -50,12 +50,14 @@ export default function Page() {
         <Link
           className="border-white border-2 text-white hover:bg-white hover:text-dark px-6 py-3 rounded-lg font-semibold"
           href="/download/ios"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           App Store
         </Link>
         <Link
           className="border-white border-2 text-white hover:bg-white hover:dark-white px-6 py-3 rounded-lg font-semibold"
-          href="https://forms.gle/PKpJ6enBmJpBjeHh7"
+          href="/download/android"
           target="_blank"
           rel="noopener noreferrer"
         >
