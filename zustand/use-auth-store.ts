@@ -1,6 +1,5 @@
 "use client";
 
-import { isErrorResponse } from "@/class/error-response";
 import { AUTH_STATUS } from "@/constant/auth-status";
 import { AuthModel } from "@/model/auth";
 import { DeviceInfoModel } from "@/model/device-info";
@@ -8,7 +7,6 @@ import { create } from "zustand";
 
 import { initializeApiClient } from "@/repository/api-client";
 import getAuthRepository from "@/repository/auth/get";
-import createAuthSessionRepository from "@/repository/auth/session/create";
 import deleteAuthSessionRepository from "@/repository/auth/session/delete";
 import { updateAuthSessionRepository } from "@/repository/auth/session/update";
 
@@ -31,7 +29,6 @@ interface AuthStore {
   getDeviceInfo: () => DeviceInfoModel;
 
   /** auth logic */
-  login: (params: { uid: string }) => Promise<void>;
   reissue: () => Promise<void>;
   refreshAuthInfo: () => Promise<void>;
   onSessionExpired: () => void;
@@ -90,29 +87,6 @@ export const useAuthStore = create<AuthStore>((set, get) => {
       }
 
       return { deviceId, osVersion, deviceName };
-    },
-
-    /** 로그인 */
-    login: async ({ uid }) => {
-      const { getDeviceInfo, setAuth, setAuthorization } = get();
-      try {
-        const deviceInfo = getDeviceInfo();
-
-        const session = await createAuthSessionRepository({
-          uid,
-          deviceInfo,
-        });
-
-        setAuthorization(session.authorization);
-
-        const data = await getAuthRepository();
-        setAuth({ status: AUTH_STATUS.AUTHORIZED, data });
-      } catch (error) {
-        if (isErrorResponse(error)) {
-          alert("로그인에 실패하였습니다.\n\n" + error.message);
-        }
-        setAuth({ status: AUTH_STATUS.UNAUTHORIZED, data: null });
-      }
     },
 
     /** 토큰 재발급 */

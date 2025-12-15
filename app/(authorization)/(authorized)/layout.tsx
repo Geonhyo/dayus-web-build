@@ -1,5 +1,6 @@
 "use client";
 
+import HeaderAuthButton from "@/component/common/button/HeaderAuthButton";
 import LoadingView from "@/component/common/view/LoadingView";
 import { AUTH_STATUS } from "@/constant/auth-status";
 import DayusImage from "@/public/images/dayus.svg";
@@ -15,7 +16,7 @@ export default function Layout({ children }: Props) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const router = useRouter();
-  const { auth, logout } = useAuthStore();
+  const { auth } = useAuthStore();
 
   const redirectUrl = useMemo(() => {
     const query = searchParams.toString();
@@ -47,12 +48,7 @@ export default function Layout({ children }: Props) {
           alt="DAYUS"
         />
         <div className="flex-1" />
-        <button
-          className="text-sm opacity-70 hover:opacity-100 transition cursor-pointer"
-          onClick={logout}
-        >
-          로그아웃
-        </button>
+        <HeaderAuthButton />
       </header>
       {children}
     </div>
