@@ -43,7 +43,7 @@ export default function Page() {
 
           <div className="mt-16">
             <Link
-              className="group inline-flex items-center gap-2 bg-white px-10 py-4 rounded-xl shadow-lg hover:bg-primary transition"
+              className="group inline-flex items-center gap-2 bg-white px-10 py-4 rounded-xl shadow-lg hover:bg-dark transition"
               href="/download"
               prefetch={true}
             >

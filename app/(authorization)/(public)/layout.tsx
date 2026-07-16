@@ -15,7 +15,7 @@ export default function Layout({ children }: Props) {
         <div className="flex flex-1" />
         <HeaderAuthButton />
         <Link
-          className="px-4 py-2 bg-white rounded-lg font-medium text-sm text-dark hover:bg-primary/90 hover:text-white transition"
+          className="px-4 py-2 bg-white rounded-lg font-medium text-sm text-dark hover:bg-dark/90 hover:text-white transition"
           href="/download"
           prefetch={true}
         >
