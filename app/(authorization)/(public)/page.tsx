@@ -188,7 +188,7 @@ export default function Page() {
           {/* 저작권 */}
           <div className="text-center text-dark-30 pt-4 border-t border-gray-700">
             <p>
-              Copyright © {new Date().getFullYear()} DayUs. All rights reserved.
+              Copyright © {new Date().getFullYear()} DAYUS. All rights reserved.
             </p>
           </div>
         </div>

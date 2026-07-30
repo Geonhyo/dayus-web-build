@@ -9,7 +9,7 @@ export default function Paeg() {
         <h3 className="text-lg font-semibold mt-6">제1조 (목적)</h3>
         <p>
           본 약관은 MoreThanDay(이하 &quot;회사&quot;라 합니다)가 운영하는
-          &quot;DayUs&quot; 모바일 애플리케이션(이하 &quot;서비스&quot;)의
+          &quot;DAYUS&quot; 모바일 애플리케이션(이하 &quot;서비스&quot;)의
           이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항을 규정함을
           목적으로 합니다.
         </p>
@@ -17,7 +17,7 @@ export default function Paeg() {
         <h3 className="text-lg font-semibold mt-6">제2조 (용어의 정의)</h3>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            &quot;서비스&quot;라 함은 회사가 제공하는 모바일 애플리케이션 DayUs
+            &quot;서비스&quot;라 함은 회사가 제공하는 모바일 애플리케이션 DAYUS
             및 관련 제반 서비스를 의미합니다.
           </li>
           <li>

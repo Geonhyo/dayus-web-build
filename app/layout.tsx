@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     description:
       "장기 연애 커플이 직접 만든 커플앱, DAYUS에서 하루 한 장씩 서로의 하루를 주고받아보세요",
     url: "https://dayus.co",
-    siteName: "DayUs",
+    siteName: "DAYUS",
     images: [
       {
         url: "https://dayus.co/images/og.webp",
