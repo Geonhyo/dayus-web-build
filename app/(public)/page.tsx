@@ -1,12 +1,75 @@
+import Faq, { FAQ_ITEMS } from "@/component/landing/Faq";
 import FeatureSection from "@/component/landing/FeatureSection";
 import PhoneScreen from "@/component/landing/PhoneScreen";
 import DownloadIcon from "@/public/icons/download.svg";
 import DayusImage from "@/public/images/dayus.svg";
 import Link from "next/link";
 
+const APP_STORE_URL = "https://apps.apple.com/app/id6752271323";
+
+/**
+ * 검색엔진과 생성형 검색이 앱의 사실관계(무엇을·어느 플랫폼·얼마)를
+ * 문장 해석 없이 읽을 수 있게 한다.
+ * 평점은 실제 리뷰가 쌓이기 전까지 넣지 않는다.
+ */
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://dayus.co/#organization",
+      name: "MoreThanDay",
+      url: "https://dayus.co",
+      email: "support@dayus.co",
+      logo: "https://dayus.co/images/og-square.png",
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://dayus.co/#website",
+      url: "https://dayus.co",
+      name: "DAYUS",
+      inLanguage: "en",
+      publisher: { "@id": "https://dayus.co/#organization" },
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://dayus.co/#app",
+      name: "DAYUS",
+      applicationCategory: "LifestyleApplication",
+      applicationSubCategory: "Photo Sharing",
+      operatingSystem: "iOS",
+      url: "https://dayus.co",
+      downloadUrl: APP_STORE_URL,
+      installUrl: APP_STORE_URL,
+      inLanguage: "en",
+      description:
+        "DAYUS is a private photo-sharing app for couples. You and your partner each send one photo a day, and their day stays sealed until you share yours. Built for long-distance couples, with no likes, no filters and no followers.",
+      publisher: { "@id": "https://dayus.co/#organization" },
+      offers: {
+        "@type": "Offer",
+        price: "0",
+        priceCurrency: "USD",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://dayus.co/#faq",
+      mainEntity: FAQ_ITEMS.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    },
+  ],
+};
+
 export default function Page() {
   return (
     <main className="h-full text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Hero */}
       <section
         className="relative min-h-svh px-6 py-32"
@@ -125,8 +188,16 @@ export default function Page() {
             <br />
             One photo, once a day, for one person.
           </p>
+
+          <p className="mt-12 text-sm leading-relaxed text-dark-30">
+            DAYUS is a private photo-sharing app for couples, made for
+            long-distance. Free on iPhone.
+          </p>
         </div>
       </section>
+
+      {/* FAQ */}
+      <Faq />
 
       {/* Final CTA */}
       <section className="bg-white px-6 py-24 text-center">

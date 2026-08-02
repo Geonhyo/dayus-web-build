@@ -10,9 +10,10 @@ const pretendard = localFont({
   variable: "--font-pretendard",
 });
 
-const TITLE = "DAYUS | One photo a day, together, even apart";
+// 제목은 카테고리(커플 앱)를 먼저 알리고, 브랜드 문구는 설명으로 내린다.
+const TITLE = "DAYUS | For Couples";
 const DESCRIPTION =
-  "A private ritual for two. Share one photo from your day to unlock theirs — no likes, no filters, no followers.";
+  "One photo a day, together, even apart. Share your day to unlock theirs — a private ritual for two. No likes, no filters, no followers.";
 
 /**
  * 공유 미리보기 이미지.
@@ -64,6 +65,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dayus.co"),
   alternates: {
     canonical: "/",
+  },
+  // iOS Safari 상단에 앱 설치 배너를 띄운다.
+  itunes: {
+    appId: "6752271323",
   },
 };
 
