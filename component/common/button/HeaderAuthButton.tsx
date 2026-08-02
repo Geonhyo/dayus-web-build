@@ -18,10 +18,10 @@ export default function HeaderAuthButton() {
   if (auth.status === AUTH_STATUS.AUTHORIZED) {
     return (
       <button
-        className="text-sm text-white-70 opacity-70 hover:opacity-100 transition cursor-pointer"
+        className="text-sm text-white-70 opacity-70 hover:opacity-100 transition cursor-pointer whitespace-nowrap"
         onClick={logout}
       >
-        로그아웃
+        Log out
       </button>
     );
   }
@@ -29,17 +29,17 @@ export default function HeaderAuthButton() {
   if (auth.status === AUTH_STATUS.UNAUTHORIZED) {
     return (
       <Link
-        className="text-sm text-white opacity-100 transition cursor-pointer"
+        className="text-sm text-white opacity-100 transition cursor-pointer whitespace-nowrap"
         href={`/auth?redirect=${encodeURIComponent(redirectUrl)}`}
       >
-        로그인
+        Log in
       </Link>
     );
   }
 
   return (
-    <button className="text-sm text-white-70 opacity-70" disabled>
-      로딩중..
+    <button className="text-sm text-white-70 opacity-70 whitespace-nowrap" disabled>
+      Loading…
     </button>
   );
 }

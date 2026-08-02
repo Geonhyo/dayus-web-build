@@ -28,7 +28,7 @@ export default function GoogleLoginButton({ className, redirect }: Props) {
         height={24}
       />
       <p className={"text-base font-medium text-[#000000]"}>
-        구글 계정으로 로그인
+        Continue with Google
       </p>
     </a>
   );

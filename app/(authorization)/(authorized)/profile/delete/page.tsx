@@ -14,7 +14,9 @@ export default function Page() {
   const [onLoading, setOnLoading] = useState(false);
 
   const onSubmit = () => {
-    const confirmed = window.confirm("정말 계정을 삭제하시겠습니까?");
+    const confirmed = window.confirm(
+      "Are you sure you want to delete your account?"
+    );
 
     if (!confirmed) {
       return;
@@ -49,16 +51,16 @@ export default function Page() {
   return (
     <main className="flex-1 flex flex-col px-4 py-6 max-w-xl w-full mx-auto">
       <h1 className="text-xl font-semibold text-white mb-4">
-        정말 계정을 삭제하시겠습니까?
+        Are you sure you want to delete your account?
       </h1>
 
       <p className="text-sm leading-relaxed text-white-70">
-        계정을 삭제한 후 7일 내에는 복구가 가능하며, 동일한 사용자와 재연결을
-        하여 데이터를 복구할 수 있습니다.
+        For 30 days after deletion your account can still be restored, and
+        reconnecting with the same partner brings your data back.
         <br />
         <br />
-        7일 이후에는 더 이상 복구할 수 없으며, 함께 연결되었던 사용자와의
-        데이터도 모두 삭제됩니다.
+        After 30 days it can no longer be recovered, and everything shared with
+        the partner you were connected to is deleted as well.
       </p>
 
       <div className="flex-1" />
@@ -78,7 +80,7 @@ export default function Page() {
               transition-colors
             "
       >
-        계정 삭제
+        Delete account
       </button>
     </main>
   );

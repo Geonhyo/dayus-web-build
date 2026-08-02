@@ -121,7 +121,7 @@ export const useAuthStore = create<AuthStore>((set, get) => {
     onSessionExpired: () => {
       get().setAuth({ status: AUTH_STATUS.UNAUTHORIZED, data: null });
       get().setAuthorization(null);
-      alert("세션이 만료되었습니다.\n다시 로그인해주세요.");
+      alert("Your session has expired.\nPlease log in again.");
     },
 
     /** 로그아웃 */

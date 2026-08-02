@@ -1,7 +1,6 @@
 "use client";
 
 import GoogleLoginButton from "@/component/common/button/login/GoogleLoginButton";
-import KakaoLoginButton from "@/component/common/button/login/KakaoLoginButton";
 import { AUTH_STATUS } from "@/constant/auth-status";
 import DayusImage from "@/public/images/dayus.svg";
 import { useAuthStore } from "@/zustand/use-auth-store";
@@ -41,12 +40,11 @@ export default function Page() {
           mb-14
         "
       >
-        하루 한 장, 둘만의 행복 습관
+        one photo a day, together, even apart
       </h2>
 
       {/* Login Buttons */}
       <div className="w-full max-w-sm flex flex-col gap-3">
-        <KakaoLoginButton redirect={redirectPath || "/"} />
         <GoogleLoginButton redirect={redirectPath || "/"} />
       </div>
     </main>

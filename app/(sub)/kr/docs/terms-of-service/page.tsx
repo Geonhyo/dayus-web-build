@@ -153,6 +153,17 @@ export default function Page() {
         본 약관은 2025년 9월 10일부터 시행됩니다.
       </p>
 
+      <div className="mt-10 space-y-1 border-t border-gray-700 pt-6 text-sm leading-relaxed text-white-70">
+        <p className="mb-2 text-base font-semibold text-white">사업자 정보</p>
+        <p>상호: MoreThanDay | 대표자: 박건효</p>
+        <p>사업자등록번호: 872-38-01256</p>
+        <p>
+          주소: 인천광역시 연수구 하모니로 158, D동 3층 317-A315호 (송도동, 송도
+          타임스페이스)
+        </p>
+        <p>이메일: support@dayus.co</p>
+      </div>
+
       <p className="mt-4 text-sm text-white-70">
         <Link className="underline" href="/docs/terms-of-service">
           View in English

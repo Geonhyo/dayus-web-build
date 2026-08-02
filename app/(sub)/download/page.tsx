@@ -1,4 +1,4 @@
-import Image from "next/image";
+import PhoneScreen from "@/component/landing/PhoneScreen";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
@@ -23,46 +23,52 @@ export default function Page() {
 
   // Web / 기타 환경
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-dark text-white">
-      {/* 미리보기 이미지 */}
-      <div className="relative w-36 h-48 md:w-48 md:h-64 mb-12">
-        <Image
-          src="/images/preview.webp"
-          alt="미리보기 이미지"
-          fill
-          className="rounded-2xl shadow-xl object-cover"
+    <main className="flex min-h-svh flex-col items-center justify-center bg-dark px-6 py-20 text-white md:py-24">
+      <div className="flex w-full max-w-4xl flex-col items-center gap-14 text-center md:flex-row md:items-center md:gap-20 md:text-left">
+        <PhoneScreen
+          src="/images/screens/today.png"
+          alt="The DAYUS home screen showing today's photo"
+          className="[--phone-w:168px] sm:[--phone-w:200px] md:[--phone-w:272px]"
+          sizes="(max-width: 767px) 200px, 272px"
           priority
         />
-      </div>
 
-      {/* 타이틀 */}
-      <h1 className="text-4xl md:text-5xl font-extrabold mb-1">DAYUS</h1>
-      <p className="text-white-70 max-w-md mb-10 leading-relaxed">
-        하루 한 장, 둘만의 행복 습관
-      </p>
+        <div className="flex flex-col items-center md:items-start">
+          <h1 className="text-4xl font-extrabold md:text-5xl">DAYUS</h1>
+          <p className="mt-2 text-lg leading-relaxed text-white-70">
+            one photo a day, together, even apart
+          </p>
 
-      <h2 className="text-xl font-bold mb-6 text-white">
-        지금 앱스토어나 구글 플레이에서
-        <br />
-        다운로드 받아보세요
-      </h2>
-      <div className="flex justify-center gap-4">
-        <Link
-          className="border-white border-2 text-white hover:bg-white hover:text-dark px-6 py-3 rounded-lg font-semibold"
-          href="/download/ios"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          App Store
-        </Link>
-        <Link
-          className="border-white border-2 text-white hover:bg-white hover:dark-white px-6 py-3 rounded-lg font-semibold"
-          href="/download/android"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Google Play
-        </Link>
+          <h2 className="mt-10 max-w-md text-xl font-bold text-white md:mt-12">
+            Get DAYUS on the App Store or Google Play
+          </h2>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-4 md:justify-start">
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-dark"
+              href={iosDownloadUrl}
+            >
+              App Store
+            </Link>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-dark"
+              href={aosDownloadUrl}
+            >
+              Google Play
+            </Link>
+          </div>
+
+          <Link
+            className="mt-10 text-sm text-dark-30 underline transition hover:text-white-70"
+            href="/"
+          >
+            Back to dayus.co
+          </Link>
+        </div>
       </div>
     </main>
   );

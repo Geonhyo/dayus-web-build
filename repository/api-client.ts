@@ -47,7 +47,7 @@ export const initializeApiClient = (onUnauthorized: () => void) => {
     ) {
       data = new ErrorResponse(
         500,
-        "알 수 없는 오류가 발생했습니다\n현재 페이지 정보와 함께 개발팀에 문의해주시면 감사하겠습니다"
+        "Something went wrong.\nPlease contact support@dayus.co and let us know which page you were on."
       );
     } else {
       data = error.response?.data as ErrorResponse;

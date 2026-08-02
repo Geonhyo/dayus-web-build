@@ -23,7 +23,7 @@ export default function Page() {
         </h1>
 
         <h2 className="mt-4 text-lg font-medium text-neutral-200">
-          로그인 도중 문제가 발생했어요
+          Something went wrong while signing in
         </h2>
 
         {message && (
@@ -43,7 +43,7 @@ export default function Page() {
               transition-colors
             "
           >
-            이전 페이지로
+            Go back
           </button>
 
           <Link
@@ -57,7 +57,7 @@ export default function Page() {
               transition-colors
             "
           >
-            홈으로
+            Go home
           </Link>
         </div>
       </main>

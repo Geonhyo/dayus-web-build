@@ -10,42 +10,61 @@ const pretendard = localFont({
   variable: "--font-pretendard",
 });
 
+const TITLE = "DAYUS | One photo a day, together, even apart";
+const DESCRIPTION =
+  "A private ritual for two. Share one photo from your day to unlock theirs — no likes, no filters, no followers.";
+
+/**
+ * 공유 미리보기 이미지.
+ *
+ * 대부분의 스크래퍼(Facebook, LinkedIn, Slack, Discord, X)는 1.91:1 을 기본으로 삼고
+ * 첫 번째 og:image 를 고르므로 wide 를 먼저 둔다. square 는 정사각을 선호하는
+ * 클라이언트(iMessage 등)를 위한 대안으로 뒤에 붙인다.
+ */
+const OG_WIDE = {
+  url: "https://dayus.co/images/og-wide.png",
+  width: 1200,
+  height: 630,
+  alt: TITLE,
+  type: "image/png",
+};
+
+const OG_SQUARE = {
+  url: "https://dayus.co/images/og-square.png",
+  width: 1200,
+  height: 1200,
+  alt: TITLE,
+  type: "image/png",
+};
+
 export const metadata: Metadata = {
-  title: "DAYUS | 하루 한 장, 둘만의 행복 습관",
-  description:
-    "장기 연애 커플이 직접 만든 커플앱, DAYUS에서 하루 한 장씩 서로의 하루를 주고받아보세요",
+  title: TITLE,
+  description: DESCRIPTION,
   keywords:
-    "DAYUS, 데이어스, 커플 앱, 커플 사진 공유, 하루 한 장, 연인 다이어리, 커플 다이어리, 사진 일기, 연애 기록, 추억 저장, 커플 라이프, 커플 추천 앱",
+    "DAYUS, couple app, long distance relationship, LDR app, photo sharing for couples, one photo a day, private photo sharing, couple widget, daily photo, relationship app",
   authors: [{ name: "MoreThanDay", url: "https://morethanday.com" }],
   creator: "MoreThanDay",
   publisher: "MoreThanDay",
   openGraph: {
-    title: "DAYUS | 하루 한 장, 둘만의 행복 습관",
-    description:
-      "장기 연애 커플이 직접 만든 커플앱, DAYUS에서 하루 한 장씩 서로의 하루를 주고받아보세요",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://dayus.co",
     siteName: "DAYUS",
-    images: [
-      {
-        url: "https://dayus.co/images/og.webp",
-        width: 1200,
-        height: 630,
-        alt: "DAYUS | 하루 한 장, 둘만의 행복 습관",
-        type: "image/webp",
-      },
-    ],
-    locale: "ko_KR",
+    images: [OG_WIDE, OG_SQUARE],
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DAYUS | 하루 한 장, 둘만의 행복 습관",
-    description:
-      "장기 연애 커플이 직접 만든 커플앱, DAYUS에서 하루 한 장씩 서로의 하루를 주고받아보세요",
-    images: ["https://dayus.co/images/og.webp"],
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_WIDE.url],
     creator: "@dayus.co",
   },
   metadataBase: new URL("https://dayus.co"),
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
@@ -54,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="en">
       <body className={`${pretendard.variable}`}>{children}</body>
     </html>
   );
