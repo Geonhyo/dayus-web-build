@@ -70,6 +70,10 @@ export default function Page() {
             partner, and operate the core features of the Service.
           </li>
           <li>
+            To confirm that you meet the minimum age requirement for the
+            Service.
+          </li>
+          <li>
             To store and deliver the photos and messages you exchange with your
             partner.
           </li>
