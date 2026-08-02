@@ -1,7 +1,6 @@
 import PhoneScreen from "@/component/landing/PhoneScreen";
 import { Metadata } from "next";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Download DAYUS | For Couples",
@@ -10,26 +9,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/download" },
 };
 
+// 모바일 UA 는 middleware.ts 에서 각 스토어로 보낸다. 여기는 데스크톱용 화면.
+const iosDownloadUrl = "/download/ios";
+const aosDownloadUrl = "/download/android";
+
 export default function Page() {
-  // iOS / Android User-Agent 판별
-  const ua = typeof window === "undefined" ? "" : navigator.userAgent;
-  const isIOS = /iPhone|iPad|iPod/i.test(ua);
-  const isAndroid = /Android/i.test(ua);
-
-  const iosDownloadUrl = "/download/ios";
-  const aosDownloadUrl = "/download/android";
-
-  if (typeof window !== "undefined") {
-    if (isIOS) {
-      redirect(iosDownloadUrl);
-    }
-
-    if (isAndroid) {
-      redirect(aosDownloadUrl);
-    }
-  }
-
-  // Web / 기타 환경
   return (
     <main className="flex min-h-svh flex-col items-center justify-center bg-dark px-6 py-20 text-white md:py-24">
       <div className="flex w-full max-w-4xl flex-col items-center gap-14 text-center md:flex-row md:items-center md:gap-20 md:text-left">
