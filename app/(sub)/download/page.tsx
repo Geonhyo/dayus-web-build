@@ -1,6 +1,14 @@
 import PhoneScreen from "@/component/landing/PhoneScreen";
+import { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+
+export const metadata: Metadata = {
+  title: "Download DAYUS | For Couples",
+  description:
+    "Get DAYUS on the App Store. One photo a day, together, even apart.",
+  alternates: { canonical: "/download" },
+};
 
 export default function Page() {
   // iOS / Android User-Agent 판별

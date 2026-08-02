@@ -3,6 +3,14 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy | DAYUS",
   description: "Privacy Policy for the DAYUS mobile application.",
+  alternates: {
+    canonical: "/docs/privacy-policy",
+    languages: {
+      en: "/docs/privacy-policy",
+      ko: "/kr/docs/privacy-policy",
+      "x-default": "/docs/privacy-policy",
+    },
+  },
 };
 
 export default function Page() {

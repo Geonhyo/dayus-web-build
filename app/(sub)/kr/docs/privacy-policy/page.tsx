@@ -4,6 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "개인정보처리방침 | DAYUS",
   description: "DAYUS 개인정보처리방침",
+  alternates: {
+    canonical: "/kr/docs/privacy-policy",
+    languages: {
+      en: "/docs/privacy-policy",
+      ko: "/kr/docs/privacy-policy",
+      "x-default": "/docs/privacy-policy",
+    },
+  },
 };
 
 export default function Page() {

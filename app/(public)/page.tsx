@@ -3,7 +3,12 @@ import FeatureSection from "@/component/landing/FeatureSection";
 import PhoneScreen from "@/component/landing/PhoneScreen";
 import DownloadIcon from "@/public/icons/download.svg";
 import DayusImage from "@/public/images/dayus.svg";
+import { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 const APP_STORE_URL = "https://apps.apple.com/app/id6752271323";
 

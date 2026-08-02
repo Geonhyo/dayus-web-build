@@ -4,6 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "이용약관 | DAYUS",
   description: "DAYUS 서비스 이용약관",
+  alternates: {
+    canonical: "/kr/docs/terms-of-service",
+    languages: {
+      en: "/docs/terms-of-service",
+      ko: "/kr/docs/terms-of-service",
+      "x-default": "/docs/terms-of-service",
+    },
+  },
 };
 
 export default function Page() {

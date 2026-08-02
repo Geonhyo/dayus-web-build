@@ -63,9 +63,8 @@ export const metadata: Metadata = {
     creator: "@dayus.co",
   },
   metadataBase: new URL("https://dayus.co"),
-  alternates: {
-    canonical: "/",
-  },
+  // canonical 은 여기서 정하지 않는다. 루트에 두면 모든 하위 페이지가 이를 상속해
+  // 자기 자신이 아닌 홈을 정본으로 가리키고, 색인에서 제외된다. 페이지마다 선언할 것.
   // iOS Safari 상단에 앱 설치 배너를 띄운다.
   itunes: {
     appId: "6752271323",

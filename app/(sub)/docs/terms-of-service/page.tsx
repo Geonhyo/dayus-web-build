@@ -4,6 +4,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Terms of Service | DAYUS",
   description: "Terms of Service for the DAYUS mobile application.",
+  alternates: {
+    canonical: "/docs/terms-of-service",
+    languages: {
+      en: "/docs/terms-of-service",
+      ko: "/kr/docs/terms-of-service",
+      "x-default": "/docs/terms-of-service",
+    },
+  },
 };
 
 export default function Page() {
