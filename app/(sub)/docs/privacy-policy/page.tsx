@@ -1,144 +1,301 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | DAYUS",
+  description: "Privacy Policy for the DAYUS mobile application.",
+};
+
 export default function Page() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-16">
-      <h1 className="text-3xl font-bold mb-8 text-white">개인정보처리방침</h1>
+    <main lang="en" className="max-w-4xl mx-auto px-6 py-16">
+      <h1 className="text-3xl font-bold mb-8 text-white">Privacy Policy</h1>
 
       <section className="space-y-6 text-white-70">
         <p>
-          MoreThanDay(이하 “회사”)는 개인정보보호법 및 정보통신망 이용촉진 및
-          정보보호 등에 관한 법률에 따라 회사가 운영하는 모바일 애플리케이션
-          “DAYUS”(이하 “서비스”) 이용자의 개인정보와 권익을 보호하고 개인정보와
-          관련한 이용자의 고충을 원활하게 처리할 수 있도록 다음과 같은
-          처리방침을 두고 있습니다.
+          MoreThanDay (the &quot;Company&quot;, &quot;we&quot;) operates the
+          &quot;DAYUS&quot; mobile application (the &quot;Service&quot;). This
+          Privacy Policy explains what personal information we collect, why we
+          collect it, who we share it with, how long we keep it, and the choices
+          you have. We handle personal information in accordance with the
+          Personal Information Protection Act of the Republic of Korea and other
+          applicable data protection laws.
+        </p>
+        <h2 className="text-xl font-semibold mt-8">
+          Article 1 (Information We Collect)
+        </h2>
+        <p>We collect the following categories of information:</p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong className="text-white">Account information</strong> — the
+            account identifier and email address provided by your social login
+            provider (Sign in with Apple or Google Sign-In), nickname, date of
+            birth, gender, profile image, language and region settings, and your
+            invite code.
+          </li>
+          <li>
+            <strong className="text-white">Content you create</strong> — the
+            photos and text you post in your diary, and the couple information
+            you set up together (relationship start date, couple name, daily
+            notification time, and time zone).
+          </li>
+          <li>
+            <strong className="text-white">Device and session information</strong>{" "}
+            — device identifier, device name, operating system version, app
+            build number, and the push notification token issued to your device.
+          </li>
+          <li>
+            <strong className="text-white">Usage and diagnostic information</strong>{" "}
+            — in-app activity events, crash reports, and performance data, used
+            to measure and improve how the Service is working.
+          </li>
+          <li>
+            <strong className="text-white">Notification preferences</strong> —
+            your consent settings for service, reminder, notice, update, and
+            marketing notifications.
+          </li>
+        </ul>
+        <p>
+          We ask for access to your camera and photo library only so that you
+          can add photos to your diary and save images to your device. Photos
+          are uploaded only when you choose to post them. We do not collect
+          location data.
         </p>
 
         <h2 className="text-xl font-semibold mt-8">
-          제1조 (개인정보의 수집 및 이용목적)
+          Article 2 (How We Use Information)
         </h2>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            본인확인, 서비스 부정 이용 방지, 고충처리, 분쟁 해결을 위해
-            개인정보를 처리합니다.
-          </li>
-          <li>맞춤형 서비스 제공 및 본인 인증을 위해 개인정보를 처리합니다.</li>
-          <li>
-            신규 서비스 안내, 접속 빈도 분석, 서비스 이용 통계 산출을 위해
-            개인정보를 처리합니다.
-          </li>
-          <li>광고 제공 및 광고 성과 측정을 위해 개인정보를 처리합니다.</li>
-        </ul>
-        <p className="mt-4">
-          회사가 수집·이용하는 개인정보 항목은 다음과 같습니다:
-        </p>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>카카오 소셜 로그인 정보 (인증 토큰)</li>
-          <li>기기정보</li>
-          <li>생년월일</li>
-          <li>성별</li>
-          <li>닉네임</li>
-          <li>광고 식별자 (ADID, IDFA 등)</li>
-        </ul>
-
-        <h2 className="text-xl font-semibold mt-8">
-          제2조 (광고 및 제3자 제공)
-        </h2>
-        <p>
-          회사는 서비스 운영을 위해 Google AdMob 등 외부 광고 플랫폼을 이용할 수
-          있으며, 이 과정에서 광고 네트워크가 이용자의 디바이스 식별자, 쿠키,
-          위치정보(선택적) 등을 자동으로 수집할 수 있습니다. 수집된 정보는
-          개인을 직접 식별할 수 없는 범위에서 광고 제공, 맞춤형 광고 노출, 광고
-          성과 분석 등에 활용됩니다.
-        </p>
-        <p>
-          광고 네트워크가 수집·처리하는 개인정보 범위와 이용 목적은 각 광고
-          제공업체의 개인정보처리방침을 따르며, 이용자는 단말기 설정을 통해
-          맞춤형 광고 노출을 제한할 수 있습니다.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8">
-          제3조 (개인정보의 보유 및 이용기간)
-        </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            보유 및 이용기간: 회원 탈퇴 또는 개인정보 수집·이용 동의 철회 시까지
+            To create and authenticate your account, connect you with your
+            partner, and operate the core features of the Service.
           </li>
           <li>
-            단, 법률에 의해 보존할 필요가 있는 경우에는 해당 법령에서 정한 기간
-            동안 보관합니다.
+            To store and deliver the photos and messages you exchange with your
+            partner.
+          </li>
+          <li>
+            To send push notifications you have enabled, such as daily reminders
+            and notices about the Service.
+          </li>
+          <li>
+            To prevent fraudulent or abusive use, handle inquiries, and resolve
+            disputes.
+          </li>
+          <li>
+            To analyze usage, diagnose crashes, and improve the stability and
+            quality of the Service.
+          </li>
+          <li>
+            To send marketing or promotional notifications, only where you have
+            separately consented. You may withdraw this consent at any time in
+            the app&apos;s notification settings.
           </li>
         </ul>
 
         <h2 className="text-xl font-semibold mt-8">
-          제4조 (개인정보처리 위탁)
+          Article 3 (Sharing with Your Partner)
         </h2>
         <p>
-          회사는 원칙적으로 개인정보를 외부에 위탁하지 않습니다. 다만 서비스
-          제공에 필요한 경우, 법령에 따라 적법하게 위탁할 수 있으며, 변경 시
-          이를 공지합니다.
+          DAYUS is a service for two connected users. Once you are connected
+          with a partner, the content you post — including photos, text, and
+          your profile information such as nickname and profile image — becomes
+          visible to that partner. This sharing is the intended purpose of the
+          Service and is not treated as provision to an unrelated third party.
+          If the connection between you and your partner ends, content that was
+          already shared may remain visible to your former partner unless it is
+          deleted.
         </p>
 
         <h2 className="text-xl font-semibold mt-8">
-          제5조 (정보주체의 권리와 행사방법)
+          Article 4 (Service Providers)
         </h2>
         <p>
-          이용자는 언제든지 자신의 개인정보에 대한 열람, 정정, 삭제, 처리정지를
-          요청할 수 있습니다. 회사는 정당한 사유가 없는 한 지체 없이 필요한
-          조치를 취합니다.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8">
-          제6조 (개인정보 자동 수집 장치)
-        </h2>
-        <p>
-          회사는 맞춤형 서비스 및 광고 제공을 위해 쿠키(cookie), 광고 식별자
-          등을 수집할 수 있습니다. 이용자는 디바이스 또는 브라우저 설정을 통해
-          쿠키 저장을 거부할 수 있으며, 이 경우 일부 서비스 이용이 제한될 수
-          있습니다.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8">제7조 (개인정보 파기)</h2>
-        <p>
-          회사는 개인정보 보유기간의 경과, 처리 목적 달성 등 불필요하게 된 경우
-          지체 없이 해당 개인정보를 파기합니다. 전자적 파일은 복구할 수 없는
-          기술적 방법을 이용하고, 종이 문서는 분쇄하거나 소각합니다.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8">제8조 (안전성 확보 조치)</h2>
-        <p>
-          회사는 개인정보보호법 제29조에 따라 개인정보를 안전하게 관리하기 위해
-          내부관리계획 수립, 접근권한 통제, 암호화, 보안 프로그램 설치 등
-          기술적·관리적 조치를 시행합니다.
-        </p>
-
-        <h2 className="text-xl font-semibold mt-8">
-          제9조 (개인정보 보호책임자)
-        </h2>
-        <p>
-          회사는 개인정보 보호와 관련한 이용자 문의 처리를 위해 개인정보
-          보호책임자를 지정하고 있습니다.
+          We do not sell personal information or provide it to third parties for
+          their own marketing. We do rely on the following service providers to
+          operate the Service, and they process personal information only on our
+          instructions and only to the extent necessary:
         </p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>담당자: 박건효</li>
-          <li>이메일: support@dayus.co</li>
+          <li>
+            <strong className="text-white">Google (Firebase)</strong> — push
+            notification delivery, crash reporting, performance monitoring, and
+            usage analytics.
+          </li>
+          <li>
+            <strong className="text-white">
+              Amazon Web Services / Cloudflare
+            </strong>{" "}
+            — object storage for the photos and images you upload.
+          </li>
+          <li>
+            <strong className="text-white">Fly.io</strong> — application server
+            hosting.
+          </li>
+          <li>
+            <strong className="text-white">Supabase</strong> — database hosting
+            for account data and usage event data.
+          </li>
+          <li>
+            <strong className="text-white">ChottuLink</strong> — generating and
+            resolving partner invitation links.
+          </li>
+        </ul>
+        <p>
+          We may also disclose information where required to do so by law or by
+          a lawful request from a public authority.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8">
+          Article 5 (International Transfer)
+        </h2>
+        <p>
+          The Company is based in the Republic of Korea, and the providers above
+          operate globally. Your information — including account data, uploaded
+          photos, and usage events — is stored and processed on servers located
+          in the United States and in other regions operated by those providers.
+          By using the Service, you understand that your information will be
+          transferred outside your country of residence, and we take steps to
+          ensure it remains protected in accordance with this Policy.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8">
+          Article 6 (Retention and Deletion)
+        </h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            We retain your personal information for as long as your account is
+            active.
+          </li>
+          <li>
+            When you request account deletion, your account enters a 30-day
+            grace period during which it can be restored. After that period, the
+            account is permanently deleted and identifiers such as your account
+            ID and email address are irreversibly masked or erased.
+          </li>
+          <li>
+            Photos and diary content are deleted together with the account at
+            the end of the grace period, except where a copy remains associated
+            with your partner&apos;s account.
+          </li>
+          <li>
+            Usage and diagnostic events are retained in de-identified or
+            aggregated form for statistical analysis.
+          </li>
+          <li>
+            Where a law requires us to retain certain records, we retain them
+            for the period that law prescribes and then destroy them.
+          </li>
+        </ul>
+        <p>
+          Electronic files are destroyed using technical methods that make
+          recovery impossible, and any paper documents are shredded or
+          incinerated.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8">
+          Article 7 (Your Rights and How to Exercise Them)
+        </h2>
+        <p>
+          You may at any time request access to, correction of, deletion of, or
+          suspension of the processing of your personal information, and you may
+          withdraw consent you have previously given. Most of these actions are
+          available directly in the app: you can edit your profile, change your
+          notification settings, delete individual content, and delete your
+          account from the settings screen. For anything else, contact us at{" "}
+          <a className="underline" href="mailto:support@dayus.co">
+            support@dayus.co
+          </a>
+          . Absent justifiable grounds to the contrary, we will act on your
+          request without undue delay.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8">
+          Article 8 (Analytics and Diagnostics)
+        </h2>
+        <p>
+          The Service records in-app events, crash reports, and performance data
+          so that we can understand how features are used and fix problems. This
+          data is tied to your account and device identifiers, and is not used
+          for advertising or shared with advertising networks. On iOS and
+          Android you can further limit diagnostic sharing through your device
+          settings.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8">
+          Article 9 (Security Measures)
+        </h2>
+        <p>
+          We implement technical and administrative measures to keep personal
+          information secure, including an internal management plan, access
+          controls, encryption of data in transit, restricted access to storage,
+          and monitoring. Uploaded images are served through time-limited,
+          signed URLs rather than public links.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8">Article 10 (Children)</h2>
+        <p>
+          The Service is not intended for children. You must be at least 14
+          years old to create an account. We do not knowingly collect personal
+          information from children below that age; if we learn that we have, we
+          will delete the account and the associated information without delay.
+        </p>
+
+        <h2 className="text-xl font-semibold mt-8">
+          Article 11 (Privacy Officer)
+        </h2>
+        <p>
+          We have designated a Privacy Officer to handle inquiries relating to
+          the protection of personal information.
+        </p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Officer: Geonhyo Park</li>
+          <li>
+            Email:{" "}
+            <a className="underline" href="mailto:support@dayus.co">
+              support@dayus.co
+            </a>
+          </li>
         </ul>
 
         <h2 className="text-xl font-semibold mt-8">
-          제10조 (권익침해 구제방법)
+          Article 12 (Remedies for Infringement of Rights)
         </h2>
         <p>
-          이용자는 개인정보 침해에 대한 상담이나 피해구제를 위해 아래 기관에
-          문의할 수 있습니다:
+          If you are not satisfied with our response, you may contact your local
+          data protection authority. Users in the Republic of Korea may also
+          contact:
         </p>
         <ul className="list-disc pl-6 space-y-2">
-          <li>개인정보침해신고센터 (privacy.kisa.or.kr / 118)</li>
-          <li>개인정보분쟁조정위원회 (kopico.go.kr / 1833-6972)</li>
-          <li>대검찰청 사이버수사과 (spo.go.kr / 02-3480-3573)</li>
-          <li>경찰청 사이버안전국 (cyberbureau.police.go.kr / 182)</li>
+          <li>
+            Personal Information Infringement Report Center (privacy.kisa.or.kr
+            / 118)
+          </li>
+          <li>
+            Personal Information Dispute Mediation Committee (kopico.go.kr /
+            1833-6972)
+          </li>
+          <li>
+            Cyber Investigation Division, Supreme Prosecutors&apos; Office
+            (spo.go.kr / 02-3480-3573)
+          </li>
+          <li>
+            National Police Agency Cyber Bureau (cyberbureau.police.go.kr / 182)
+          </li>
         </ul>
+
+        <h2 className="text-xl font-semibold mt-8">
+          Article 13 (Changes to This Policy)
+        </h2>
+        <p>
+          We may update this Privacy Policy to reflect changes to the Service or
+          to applicable law. We will announce any change within the Service at
+          least 7 days before it takes effect, and at least 30 days in advance
+          where the change is significant or unfavorable to users.
+        </p>
       </section>
 
       <p className="mt-16 text-white text-sm">
-        본 개인정보처리방침은 2025년 9월 10일부터 적용됩니다.
+        This Privacy Policy is effective as of August 2, 2026.
       </p>
     </main>
   );

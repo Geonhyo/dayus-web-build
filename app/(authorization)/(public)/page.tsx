@@ -150,7 +150,7 @@ export default function Page() {
           <div className="flex flex-wrap justify-center gap-4 border-b border-gray-700 pb-6 font-medium">
             <Link
               className="hover:font-bold transition"
-              href="/docs/terms-of-service"
+              href="/kr/docs/terms-of-service"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -159,7 +159,7 @@ export default function Page() {
             <span className="text-dark-30">|</span>
             <Link
               className="hover:font-bold transition"
-              href="/docs/privacy-policy"
+              href="/kr/docs/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
             >
