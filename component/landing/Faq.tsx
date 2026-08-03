@@ -32,7 +32,7 @@ export const FAQ_ITEMS = [
   {
     question: "Is there an Android version?",
     answer:
-      "DAYUS is on iPhone today. Android is in the works — you can leave your email from the Google Play link to hear when it opens.",
+      "DAYUS is on iPhone today. Android is in the works — leave your email on the Android page and we will tell you the day it opens.",
   },
   {
     question: "What happens to the days we have already shared?",

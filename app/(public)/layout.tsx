@@ -1,8 +1,9 @@
-import AuthBootstrap from "@/component/common/AuthBootstrap";
-import HeaderAuthButton from "@/component/common/button/HeaderAuthButton";
+// 웹 로그인은 안드로이드 출시까지 내려둔다 (아래 주석 참고).
+// import AuthBootstrap from "@/component/common/AuthBootstrap";
+// import HeaderAuthButton from "@/component/common/button/HeaderAuthButton";
 import DayusImage from "@/public/images/dayus.svg";
 import Link from "next/link";
-import { Suspense } from "react";
+// import { Suspense } from "react";
 
 type Props = {
   children: React.ReactNode;
@@ -14,16 +15,21 @@ type Props = {
  * 인증 상태와 무관하게 서버에서 완전히 렌더링돼야 검색엔진과 SNS 스크래퍼가 본문을 읽는다.
  * 인증에 의존하는 조각은 AuthBootstrap 과 HeaderAuthButton 뿐이고 둘 다 클라이언트 전용이다.
  * HeaderAuthButton 은 useSearchParams 를 쓰므로 Suspense 로 감싸야 페이지가 정적으로 프리렌더된다.
+ *
+ * ⏸ 웹 로그인 일시 중단 (안드로이드 출시 후 복구).
+ * 지금 웹에서 할 수 있는 일이 로그인 자체뿐이라 진입점을 내려둔다. 아래 주석을 풀고
+ * middleware.ts 의 AUTH_GATE 블록을 지우면 그대로 돌아온다.
  */
 export default function Layout({ children }: Props) {
   return (
     <main className="h-full text-white">
-      <AuthBootstrap />
+      {/* <AuthBootstrap /> */}
 
       {/* Header */}
       <header className="py-4 px-6 fixed top-0 left-0 w-full z-10 bg-transparent-dark flex flex-row gap-4 items-center">
         <DayusImage className="w-[96px] h-[23px] fill-white" alt="DAYUS" />
         <div className="flex flex-1" />
+        {/*
         <Suspense
           fallback={
             <button className="text-sm text-white-70 opacity-70" disabled>
@@ -33,6 +39,7 @@ export default function Layout({ children }: Props) {
         >
           <HeaderAuthButton />
         </Suspense>
+        */}
         <Link
           className="px-4 py-2 bg-white rounded-lg font-medium text-sm text-dark hover:bg-dark/90 hover:text-white transition"
           href="/download"

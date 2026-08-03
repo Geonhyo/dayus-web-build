@@ -219,13 +219,12 @@ export default function Page() {
           >
             App Store
           </Link>
+          {/* 스토어에 아직 없다. 링크는 대기자 명단 페이지(자사 도메인)로 간다. */}
           <Link
             className="rounded-lg border-2 border-dark px-6 py-3 font-semibold text-dark transition hover:bg-dark hover:text-white"
             href="/download/android"
-            target="_blank"
-            rel="noopener noreferrer"
           >
-            Google Play
+            Android — notify me
           </Link>
         </div>
       </section>

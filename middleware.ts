@@ -20,7 +20,26 @@ const BOT =
 const IOS = /iPhone|iPad|iPod/i;
 const ANDROID = /Android/i;
 
+/**
+ * ⏸ AUTH_GATE — 웹 로그인 일시 중단 (안드로이드 출시 후 제거).
+ *
+ * 헤더의 로그인 버튼만 가리면 URL 을 직접 친 사람은 그대로 들어온다.
+ * 페이지 코드는 손대지 않고 여기서만 막아두면, 복구할 때 이 상수와 아래 블록,
+ * matcher 의 두 항목만 지우면 된다.
+ */
+const AUTH_GATE_PREFIXES = ["/auth", "/profile"];
+
 export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
+
+  if (
+    AUTH_GATE_PREFIXES.some(
+      (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`)
+    )
+  ) {
+    return NextResponse.redirect(new URL("/", request.url), 307);
+  }
+
   const ua = request.headers.get("user-agent") ?? "";
 
   let target: string | null = null;
@@ -46,5 +65,6 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: "/download",
+  // "/auth/:path*", "/profile/:path*" 는 AUTH_GATE 용 — 로그인을 되살릴 때 함께 지운다.
+  matcher: ["/download", "/auth/:path*", "/profile/:path*"],
 };

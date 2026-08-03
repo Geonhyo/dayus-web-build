@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/download" },
 };
 
-// 모바일 UA 는 middleware.ts 에서 각 스토어로 보낸다. 여기는 데스크톱용 화면.
+// 모바일 UA 는 middleware.ts 에서 각각으로 보낸다 (iOS → 앱스토어,
+// Android → 출시 알림 신청 페이지). 여기는 데스크톱용 화면.
 const iosDownloadUrl = "/download/ios";
 const aosDownloadUrl = "/download/android";
 
@@ -32,7 +33,7 @@ export default function Page() {
           </p>
 
           <h2 className="mt-10 max-w-md text-xl font-bold text-white md:mt-12">
-            Get DAYUS on the App Store or Google Play
+            Get DAYUS on the App Store — Android is on the way
           </h2>
 
           <div className="mt-6 flex flex-wrap justify-center gap-4 md:justify-start">
@@ -44,13 +45,12 @@ export default function Page() {
             >
               App Store
             </Link>
+            {/* 아직 스토어에 없으므로 새 탭이 아니라 자사 대기자 명단 페이지로 보낸다. */}
             <Link
-              target="_blank"
-              rel="noopener noreferrer"
               className="rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition hover:bg-white hover:text-dark"
               href={aosDownloadUrl}
             >
-              Google Play
+              Android — notify me
             </Link>
           </div>
 
